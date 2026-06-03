@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Incrife Busca | Fan Page Oficial</title>
+    <!-- Fuentes modernas y estilo limpio -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (libre) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0b0a0f;
+            font-family: 'Inter', sans-serif;
+            color: #f0f0f0;
+            scroll-behavior: smooth;
+            line-height: 1.5;
+        }
+
+        /* gradiente dinámico para background */
+        .bg-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 30%, rgba(100, 70, 150, 0.2), rgba(10, 8, 20, 0.95));
+            pointer-events: none;
+            z-index: -2;
+        }
+
+        .bg-noise {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        /* HEADER */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 24px 0 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #FFD966, #CB6AE8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .logo p {
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            color: #a9a6c2;
+        }
+
+        .nav-links a {
+            color: #ddd9f0;
+            text-decoration: none;
+            margin-left: 32px;
+            font-weight: 500;
+            transition: 0.2s;
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover {
+            color: #e7b2ff;
+            border-bottom: 1px solid #cb6ae8;
+        }
+
+        /* Hero section */
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            padding: 60px 0 50px;
+        }
+
+        .hero-text {
+            flex: 1.2;
+        }
+
+        .hero-text .badge {
+            background: rgba(203, 106, 232, 0.2);
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #daaaff;
+            margin-bottom: 20px;
+            backdrop-filter: blur(4px);
+        }
+
+        .hero-text h2 {
+            font-size: 3.4rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #ffffff, #cfa5ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: #bfbcd6;
+            max-width: 550px;
+            margin-bottom: 30px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 28px;
+            border-radius: 40px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(95deg, #a55af0, #cb6ae8);
+            color: white;
+            box-shadow: 0 4px 14px rgba(170, 90, 240, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 22px rgba(170, 90, 240, 0.4);
+            background: linear-gradient(95deg, #b46eff, #da7eff);
+        }
+
+        .btn-outline {
+            border: 1.5px solid rgba(203, 106, 232, 0.7);
+            color: #f0e6ff;
+        }
+
+        .btn-outline:hover {
+            background: rgba(203, 106, 232, 0.15);
+            border-color: #cb6ae8;
+        }
+
+        .hero-img {
+            flex: 0.9;
+            display: flex;
+            justify-content: center;
+        }
+
+        .artist-avatar {
+            background: linear-gradient(145deg, #2a2340, #110e1c);
+            border-radius: 42% 58% 70% 30% / 44% 50% 50% 56%;
+            padding: 12px;
+            width: 280px;
+            height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5), 0 0 0 2px rgba(203, 106, 232, 0.3);
+        }
+
+        .artist-avatar i {
+            font-size: 130px;
+            color: #d780ff;
+            text-shadow: 0 0 15px #b44eff;
+        }
+
+        /* Sección música */
+        .section {
+            padding: 70px 0 60px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: -0.3px;
+        }
+
+        .section-sub {
+            color: #a39fc2;
+            margin-bottom: 48px;
+            font-size: 1rem;
+        }
+
+        .music-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .music-card {
+            background: rgba(20, 18, 32, 0.7);
+            backdrop-filter: blur(4px);
+            border-radius: 32px;
+            padding: 24px 20px;
+            width: 260px;
+            text-align: center;
+            transition: all 0.2s;
+            border: 1px solid rgba(203, 106, 232, 0.2);
+        }
+
+        .music-card:hover {
+            transform: translateY(-6px);
+            border-color: #cb6ae8;
+            background: rgba(35, 28, 58, 0.8);
+        }
+
+        .music-icon {
+            font-size: 3rem;
+            color: #daaaff;
+            margin-bottom: 16px;
+        }
+
+        .music-card h4 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+
+        .music-card p {
+            font-size: 0.85rem;
+            color: #bcb7df;
+            margin-bottom: 20px;
+        }
+
+        .listen-btn {
+            background: none;
+            border: 1px solid #cb6ae8;
+            padding: 8px 16px;
+            border-radius: 60px;
+            color: white;
+            font-weight: 500;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: 0.2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .listen-btn:hover {
+            background: #cb6ae8;
+            color: #0b0a0f;
+        }
+
+        /* Galería imágenes estilo collage */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            background: #1e1a2f;
+            border-radius: 28px;
+            aspect-ratio: 1 / 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            border: 1px solid rgba(203,106,232,0.2);
+            color: #cfc5ff;
+            text-decoration: none;
+        }
+
+        .gallery-item i {
+            font-size: 3.5rem;
+            margin-bottom: 12px;
+        }
+
+        .gallery-item span {
+            font-weight: 500;
+        }
+
+        .gallery-item:hover {
+            background: #2a2346;
+            transform: scale(1.02);
+            border-color: #cb6ae8;
+        }
+
+        /* Timeline / Biografía */
+        .bio-text {
+            max-width: 780px;
+            background: rgba(0,0,0,0.3);
+            padding: 28px 32px;
+            border-radius: 48px;
+            border-left: 4px solid #cb6ae8;
+            margin-bottom: 40px;
+        }
+
+        .bio-text p {
+            margin-bottom: 18px;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .stats {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .stat {
+            background: rgba(203,106,232,0.08);
+            border-radius: 48px;
+            padding: 12px 30px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.9rem;
+            font-weight: 800;
+            color: #d9aeff;
+        }
+
+        /* Footer contacto */
+        .footer-links {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 40px 0 30px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .social-list {
+            display: flex;
+            gap: 28px;
+        }
+
+        .social-list a {
+            color: #bcb3e6;
+            font-size: 1.6rem;
+            transition: 0.2s;
+        }
+
+        .social-list a:hover {
+            color: #e3bcff;
+            transform: translateY(-3px);
+        }
+
+        .newsletter h4 {
+            margin-bottom: 12px;
+        }
+
+        .newsletter form {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .newsletter input {
+            background: #1c182b;
+            border: 1px solid #3d3460;
+            padding: 12px 16px;
+            border-radius: 60px;
+            color: white;
+            font-family: inherit;
+            outline: none;
+        }
+
+        .newsletter button {
+            background: #cb6ae8;
+            border: none;
+            padding: 0 20px;
+            border-radius: 60px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #0b0a0f;
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 25px 0 40px;
+            font-size: 0.8rem;
+            color: #6c6791;
+        }
+
+        @media (max-width: 780px) {
+            .hero-text h2 {
+                font-size: 2.2rem;
+            }
+            .nav-links a {
+                margin-left: 18px;
+            }
+            .container {
+                padding: 0 20px;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="bg-glow"></div>
+<div class="bg-noise"></div>
+
+<div class="container">
+    <header>
+        <div class="logo">
+            <h1>INCRIFE BUSCA</h1>
+            <p>✦ FAN PAGE OFICIAL ✦</p>
+        </div>
+        <div class="nav-links">
+            <a href="#home">INICIO</a>
+            <a href="#musica">MÚSICA</a>
+            <a href="#galeria">GALERÍA</a>
+            <a href="#bio">BIO</a>
+        </div>
+    </header>
+
+    <!-- Hero / home -->
+    <section id="home">
+        <div class="hero">
+            <div class="hero-text">
+                <div class="badge"><i class="fas fa-head-side-headphones"></i>  #IncrifeVibes</div>
+                <h2>Incrife Busca<br>El futuro del sonido alternativo</h2>
+                <p>Producción envolvente, letras crudas y una identidad única. Sumérgete en el universo sonoro del artista que está rompiendo moldes.</p>
+                <div class="btn-group">
+                    <a href="#musica" class="btn btn-primary"><i class="fas fa-play"></i> Escuchar ahora</a>
+                    <a href="#" class="btn btn-outline" id="fanMsgBtn"><i class="fas fa-heart"></i> Ser fan</a>
+                </div>
+            </div>
+            <div class="hero-img">
+                <div class="artist-avatar">
+                    <i class="fas fa-microphone-alt"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Música / Discos -->
+    <section id="musica" class="section">
+        <div class="section-title">🎧  Discografía esencial</div>
+        <div class="section-sub">Lo más reciente de Incrife Busca, directo al alma.</div>
+        <div class="music-grid">
+            <div class="music-card">
+                <div class="music-icon"><i class="fas fa-compact-disc"></i></div>
+                <h4>CIELO ROTO</h4>
+                <p>EP debut · 2024</p>
+                <a href="#" class="listen-btn" data-track="Cielo Roto"><i class="fab fa-spotify"></i> Spotify</a>
+            </div>
+            <div class="music-card">
+                <div class="music-icon"><i class="fas fa-waveform"></i></div>
+                <h4>BUSCA INTERIOR</h4>
+                <p>Single · 2025</p>
+                <a href="#" class="listen-btn" data-track="Busca Interior"><i class="fab fa-apple"></i> Apple Music</a>
+            </div>
+            <div class="music-card">
+                <div class="music-icon"><i class="fas fa-headphones"></i></div>
+                <h4>LUCES FUGACES</h4>
+                <p>Álbum · 2023</p>
+                <a href="#" class="listen-btn" data-track="Luces Fugaces"><i class="fab fa-youtube"></i> YouTube Music</a>
+            </div>
+            <div class="music-card">
+                <div class="music-icon"><i class="fas fa-synth"></i></div>
+                <h4>NOCTURNO</h4>
+                <p>Live Session</p>
+                <a href="#" class="listen-btn" data-track="Nocturno"><i class="fas fa-video"></i> Ver live</a>
+            </div>
+        </div>
+        <!-- mini alerta de demo -->
+        <div style="text-align: center; margin-top: 28px; font-size:0.85rem; opacity:0.8;">
+            <i class="fas fa-music"></i> "La música es el puente entre lo real y lo eterno" — Incrife Busca
+        </div>
+    </section>
+
+    <!-- Galería visual conceptual -->
+    <section id="galeria" class="section">
+        <div class="section-title">📸  Mundo Incrife</div>
+        <div class="section-sub">Posters, arte conceptual y momentos icónicos</div>
+        <div class="gallery">
+            <div class="gallery-item">
+                <i class="fas fa-palette"></i>
+                <span>Arte conceptual</span>
+            </div>
+            <div class="gallery-item">
+                <i class="fas fa-camera-retro"></i>
+                <span>Backstage 2024</span>
+            </div>
+            <div class="gallery-item">
+                <i class="fas fa-ticket-alt"></i>
+                <span>Tour flyers</span>
+            </div>
+            <div class="gallery-item">
+                <i class="fas fa-microphone"></i>
+                <span>Sesión en vivo</span>
+            </div>
+            <div class="gallery-item">
+                <i class="fas fa-dove"></i>
+                <span>Merch oficial</span>
+            </div>
+            <div class="gallery-item">
+                <i class="fas fa-glasses"></i>
+                <span>Detrás del beat</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Biografía y datos -->
+    <section id="bio" class="section">
+        <div class="section-title">✨  Biografía & legado</div>
+        <div class="bio-text">
+            <p><strong>Incrife Busca</strong> (nacido en Buenos Aires, 1998) es un productor, cantante y multi-instrumentista que fusiona electrónica experimental, R&B alternativo y texturas urbanas. Su nombre artístico representa la búsqueda perpetua de la belleza en lo imperfecto.</p>
+            <p>Lanzó su primer EP "Cielo Roto" de manera independiente, acumulando millones de streams en plataformas digitales. Reconocido por su puesta en escena envolvente y colaboraciones con referentes del under, Incrife se ha presentado en festivales como Lollapalooza (escenario alternativo) y South Wave.</p>
+            <p>Con más de 5 años de carrera, continúa inspirando a una comunidad global de fans que valoran la autenticidad y la innovación sonora. Actualmente prepara su próximo álbum “Frecuencia Alma”.</p>
+        </div>
+        <div class="stats">
+            <div class="stat"><div class="stat-number">2M+</div><div>Streams</div></div>
+            <div class="stat"><div class="stat-number">15K+</div><div>Fans activos</div></div>
+            <div class="stat"><div class="stat-number">50+</div><div>Conciertos</div></div>
+            <div class="stat"><div class="stat-number">8</div><div>Nominaciones</div></div>
+        </div>
+    </section>
+
+    <!-- Footer + Redes -->
+    <div class="footer-links">
+        <div class="social-list">
+            <a href="#" aria-label="Instagram" id="igLink"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter" id="twLink"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Spotify" id="spLink"><i class="fab fa-spotify"></i></a>
+            <a href="#" aria-label="YouTube" id="ytLink"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="TikTok" id="ttLink"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <div class="newsletter">
+            <h4><i class="fas fa-envelope"></i> FAN CLUB</h4>
+            <form id="newsletterForm">
+                <input type="email" placeholder="tu@email.com" required id="fanEmail">
+                <button type="submit">Suscribir</button>
+            </form>
+            <small style="display:block; margin-top:8px;">Recibe novedades y lanzamientos exclusivos.</small>
+        </div>
+    </div>
+    <div class="copyright">
+        <i class="far fa-copyright"></i> 2025 Fan Page de Incrife Busca — Hecho con devoción por la comunidad #IncrifeArmy
+    </div>
+</div>
+
+<!-- JS para interactividad (demo fan y alertas) -->
+<script>
+    // Función para notificaciones amigables (reemplaza alert pero mantiene estilo)
+    function showMessage(msg, isError = false) {
+        let toast = document.createElement('div');
+        toast.innerText = msg;
+        toast.style.position = 'fixed';
+        toast.style.bottom = '30px';
+        toast.style.left = '50%';
+        toast.style.transform = 'translateX(-50%)';
+        toast.style.backgroundColor = isError ? '#b8244c' : '#6a2e9a';
+        toast.style.color = 'white';
+        toast.style.padding = '12px 28px';
+        toast.style.borderRadius = '50px';
+        toast.style.fontWeight = '500';
+        toast.style.zIndex = '9999';
+        toast.style.backdropFilter = 'blur(12px)';
+        toast.style.background = isError ? 'rgba(180, 40, 70, 0.9)' : 'rgba(106, 46, 154, 0.95)';
+        toast.style.border = '1px solid rgba(255,255,240,0.3)';
+        toast.style.fontFamily = "'Inter', sans-serif";
+        toast.style.boxShadow = '0 8px 20px black';
+        document.body.appendChild(toast);
+        setTimeout(() => {
+            toast.style.opacity = '0';
+            setTimeout(() => toast.remove(), 400);
+        }, 2800);
+    }
+
+    // Botón "Ser fan"
+    const fanBtn = document.getElementById('fanMsgBtn');
+    if(fanBtn) {
+        fanBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            showMessage('💜 ¡Gracias por ser parte del Incrife Army! 💜 Ahora eres fan oficial.');
+            // efecto corazon adicional 
+            const heart = document.createElement('i');
+            heart.className = 'fas fa-heart';
+            heart.style.position = 'fixed';
+            heart.style.color = '#ff77dd';
+            heart.style.fontSize = '2rem';
+            heart.style.left = (e.clientX || 100) + 'px';
+            heart.style.top = (e.clientY || 100) + 'px';
+            heart.style.pointerEvents = 'none';
+            heart.style.transition = 'all 1s ease-out';
+            heart.style.opacity = '1';
+            document.body.appendChild(heart);
+            setTimeout(() => { heart.style.transform = 'translateY(-40px)'; heart.style.opacity = '0'; setTimeout(() => heart.remove(), 1000); }, 10);
+        });
+    }
+
+    // Listen buttons: demo para redirigir o mostrar info (simulación de enlaces)
+    const listenBtns = document.querySelectorAll('.listen-btn');
+    listenBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const trackName = btn.getAttribute('data-track') || 'canción';
+            showMessage(`🎵 Redirigiendo a plataforma para escuchar "${trackName}" de Incrife Busca. (Demo interactiva)`);
+            // En una página real se pondrían links oficiales. Aquí simulamos apertura de nueva pestaña conceptual:
+            // window.open('https://open.spotify.com/artist/ejemplo', '_blank');
+        });
+    });
+
+    // Galería items: mensaje conceptual (proximamente más contenido)
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            showMessage('✨ Pronto más contenido exclusivo de Incrife Busca. #MundoIncrife ✨');
+        });
+    });
+
+    // Simular newsletter (solo front)
+    const newsletterForm = document.getElementById('newsletterForm');
+    if(newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const emailInput = document.getElementById('fanEmail');
+            const email = emailInput.value.trim();
+            if(email && email.includes('@')) {
+                showMessage(`📩 ¡Suscripción exitosa! ${email} ahora recibe noticias de Incrife Busca. 💌`);
+                emailInput.value = '';
+            } else {
+                showMessage('❌ Ingresa un email válido para unirte al fan club.', true);
+            }
+        });
+    }
+
+    // Redes sociales: mostrar mensaje de "Sigue a Incrife en redes oficiales"
+    const socialLinks = [
+        { id: 'igLink', name: 'Instagram' },
+        { id: 'twLink', name: 'Twitter' },
+        { id: 'spLink', name: 'Spotify' },
+        { id: 'ytLink', name: 'YouTube' },
+        { id: 'ttLink', name: 'TikTok' }
+    ];
+    socialLinks.forEach(social => {
+        const link = document.getElementById(social.id);
+        if(link) {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                showMessage(`✨ Síguenos en ${social.name} oficial de Incrife Busca para contenido diario. ✨`);
+            });
+        }
+    });
+
+    // Efecto de scroll suave (por si los anchor links se usan)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if(href === "#" || href === "") return;
+            const target = document.querySelector(href);
+            if(target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+    
+    // pequeño mensaje de bienvenida personalizado (fan page)
+    window.addEventListener('load', () => {
+        console.log('Fan Page de Incrife Busca cargada — Apoya el arte alternativo');
+        // un pequeño detalle para que sientan la bienvenida:
+        setTimeout(() => {
+            showMessage('🎤 Bienvenid@ a la Fan Page de Incrife Busca · Explora su universo musical 🎧', false);
+        }, 800);
+    });
+</script>
+</body>
+</html>
