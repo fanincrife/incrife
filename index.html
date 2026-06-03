@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>INCRIFE · Novedades y Comunidad de Fans | Fansite No Oficial</title>
+  <title>INCRIFE · Novedades, Música y Comunidad | Fansite Oficial de Seguidores</title>
   
-  <!-- ========== SEO EXTENDIDO (MUCHO MÁS COMPLETO) ========== -->
-  <meta name="description" content="INCRIFE Fansite: toda la actualidad del artista, nuevos temas, videoclips, colaboradores y lanzamientos. Comunidad de seguidores no oficial con contenido exclusivo.">
-  <meta name="keywords" content="incrife noticias, incrife colaboradores, videoclips incrife, nuevos temas incrife, incrife spotify, incrife productores, incrife fansite">
+  <!-- ========== SEO COMPLETO Y PROFESIONAL ========== -->
+  <meta name="description" content="INCRIFE Fansite: última hora, nuevos temas, videoclips, colaboradores y toda la actualidad del artista. Comunidad de fans no oficial con información detallada.">
+  <meta name="keywords" content="incrife novedades, incrife colaboradores, videoclips incrife, nuevos temas incrife, productores incrife, incrife spotify, fansite incrife, noticias incrife">
   <meta name="author" content="INCRIFE Fan Club (No Oficial)">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <link rel="canonical" href="https://incrifefansite.com">
   
-  <!-- Verificación Google Search Console -->
+  <!-- Google Site Verification -->
   <meta name="google-site-verification" content="TjB9SWFveZH2qDINHyNkW0yyU_JO_W9-3o5xTpqtTtQ">
   
   <meta property="og:title" content="INCRIFE · Novedades y Comunidad de Fans">
@@ -21,32 +21,33 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://raw.githubusercontent.com/incrife/incrife/main/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(57).png">
   
-  <meta name="theme-color" content="#1a73e8">
+  <meta name="theme-color" content="#1e40af">
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/incrife/incrife/main/favicon-32x32.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@300;400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- TIPOGRAFÍA MÁS PROFESIONAL: Inter + Playfair Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: #f6f8fc;
+      background: #f8fafc;
       font-family: 'Inter', sans-serif;
-      color: #121826;
-      overflow-x: hidden;
+      color: #0f172a;
+      line-height: 1.5;
+      scroll-behavior: smooth;
     }
     
-    /* HEADER MODERNO - AZUL/MARRON SUAVE, SIN ROJO */
-    .header-modern {
+    /* HEADER ELEGANTE */
+    .site-header {
+      background: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
       position: sticky;
       top: 0;
-      width: 100%;
-      z-index: 100;
-      background: rgba(255, 255, 250, 0.96);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid #e2e8f0;
-      padding: 0.8rem 2rem;
+      z-index: 50;
+      padding: 0.9rem 2rem;
     }
-    .header-container {
+    .header-inner {
       max-width: 1280px;
       margin: 0 auto;
       display: flex;
@@ -55,393 +56,404 @@
       flex-wrap: wrap;
       gap: 1rem;
     }
-    .logo-area {
+    .brand {
       display: flex;
       align-items: center;
       gap: 12px;
     }
-    .logo-area i {
-      font-size: 32px;
-      color: #1e3a8a;
+    .brand-icon {
       background: #eef2ff;
-      padding: 8px;
-      border-radius: 20px;
+      width: 44px;
+      height: 44px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: #1e40af;
     }
-    .logo-area span {
-      font-weight: 800;
-      font-size: 1.4rem;
+    .brand h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      font-family: 'Playfair Display', serif;
       background: linear-gradient(135deg, #1e3a8a, #3b82f6);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
     .badge-fan {
-      background: #e9edf2;
-      padding: 4px 10px;
+      background: #f1f5f9;
+      padding: 4px 12px;
       border-radius: 40px;
       font-size: 0.7rem;
       font-weight: 600;
-      color: #2c3e66;
+      color: #334155;
     }
-    .nav-modern a {
-      margin-left: 1.8rem;
+    .nav-links a {
       text-decoration: none;
-      color: #2c3e50;
+      color: #334155;
       font-weight: 500;
+      margin-left: 2rem;
       transition: 0.2s;
+      font-size: 0.9rem;
     }
-    .nav-modern a:hover { color: #2563eb; }
+    .nav-links a:hover { color: #2563eb; }
     
-    /* HERO sin imagen de perfil */
-    .hero-no-img {
+    /* Contenedores principales */
+    .container {
       max-width: 1280px;
-      margin: 2rem auto 1rem;
-      padding: 2rem 2rem;
-      background: linear-gradient(105deg, #ffffff 0%, #f0f4fe 100%);
-      border-radius: 40px;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+      margin: 0 auto;
+      padding: 0 2rem;
     }
-    .hero-content h1 {
-      font-size: 2.8rem;
+    
+    /* Hero sin imagen redundante */
+    .hero-section {
+      background: linear-gradient(120deg, #ffffff 0%, #f0f4fe 100%);
+      border-radius: 2rem;
+      margin: 2rem auto 2rem;
+      padding: 2.5rem 2rem;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
       font-weight: 800;
       letter-spacing: -0.02em;
-      margin-bottom: 0.8rem;
+      margin-bottom: 1rem;
     }
-    .hero-accent {
+    .hero-title span {
       color: #2563eb;
-      border-bottom: 3px solid #2563eb;
-      display: inline-block;
+      border-bottom: 3px solid #3b82f6;
     }
     .hero-desc {
-      max-width: 650px;
+      font-size: 1.05rem;
       color: #334155;
-      margin: 1rem 0 1.8rem;
+      max-width: 650px;
+      margin: 1rem 0 1.5rem;
     }
-    .spotify-button {
+    .btn-spotify {
       background: #1DB954;
       display: inline-flex;
+      align-items: center;
       gap: 12px;
       padding: 0.7rem 1.8rem;
       border-radius: 60px;
       color: white;
       font-weight: 700;
       text-decoration: none;
-      transition: all 0.2s;
+      transition: 0.2s;
     }
-    .disclaimer {
+    .disclaimer-badge {
       background: #eef2ff;
-      max-width: 1280px;
-      margin: 1rem auto;
-      padding: 0.6rem 2rem;
       border-radius: 60px;
       text-align: center;
+      padding: 0.6rem;
       font-size: 0.75rem;
-      color: #374151;
+      color: #1f3a6b;
+      margin: 1rem 0;
     }
     
-    /* Grid general */
-    .grid-news {
-      max-width: 1280px;
-      margin: 2rem auto;
-      padding: 0 2rem;
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 2rem;
+    /* SECCIONES ORDENADAS */
+    .section {
+      margin: 3rem 0;
     }
-    .section-title {
-      font-size: 1.5rem;
-      font-weight: 700;
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1.8rem;
       border-left: 5px solid #2563eb;
       padding-left: 1rem;
-      margin-bottom: 1.5rem;
+    }
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+    .section-header i {
+      font-size: 1.6rem;
+      color: #3b82f6;
+    }
+    
+    /* Grid noticias */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.8rem;
     }
     .news-card {
       background: white;
-      border-radius: 28px;
-      padding: 1.4rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 5px 12px rgba(0,0,0,0.03);
-      border: 1px solid #eef2ff;
+      border-radius: 1.5rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      border: 1px solid #e2edff;
+      transition: all 0.2s;
     }
+    .news-card:hover { border-color: #b9d0f8; box-shadow: 0 8px 20px rgba(0,0,0,0.05); }
     .news-tag {
       background: #eef2ff;
       display: inline-block;
       padding: 4px 12px;
-      border-radius: 40px;
+      border-radius: 30px;
       font-size: 0.7rem;
       font-weight: 600;
-      color: #1e3a8a;
+      color: #1e40af;
     }
-    .date-icon {
+    .news-date {
       font-size: 0.7rem;
-      color: #5b6e8c;
-      margin: 8px 0;
+      color: #64748b;
+      margin: 0.6rem 0;
+    }
+    .news-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 0.5rem 0;
     }
     
-    /* Colaboradores sección especial */
-    .collab-section {
-      background: #ffffff;
-      border-radius: 32px;
-      padding: 1.4rem;
-      margin-bottom: 2rem;
-      border: 1px solid #e6edf4;
-    }
+    /* Colaboradores en cards elegantes */
     .collab-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
     }
-    .collab-item {
+    .collab-card {
+      background: white;
+      border-radius: 1.5rem;
+      padding: 1.2rem;
+      border: 1px solid #e6edf4;
       display: flex;
       align-items: center;
-      gap: 16px;
-      border-bottom: 1px solid #eef2f6;
-      padding-bottom: 0.8rem;
+      gap: 1rem;
     }
-    .collab-icon {
-      width: 48px;
-      height: 48px;
-      background: #e6f0ff;
+    .collab-avatar {
+      width: 56px;
+      height: 56px;
+      background: #dbeafe;
       border-radius: 60px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.4rem;
-      color: #2563eb;
+      font-size: 1.6rem;
+      color: #1e3a8a;
     }
     
-    /* videoclips recientes: estilo tarjetas horizontales */
-    .videos-section {
-      max-width: 1280px;
-      margin: 2rem auto;
-      padding: 0 2rem;
-    }
+    /* Videoclips */
     .videos-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
+      gap: 1.8rem;
     }
-    .video-card {
+    .video-item {
       background: #ffffff;
-      border-radius: 28px;
+      border-radius: 1.5rem;
       overflow: hidden;
       transition: transform 0.2s;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.05);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.03);
     }
     .video-thumb {
-      background: #d9e3f0;
-      height: 170px;
+      background: #e2eafc;
+      height: 180px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 2.5rem;
-      color: #1e3a8a;
+      color: #2563eb;
     }
-    .video-card h4 {
-      padding: 1rem 1rem 0.3rem;
+    .video-item h4 {
       font-weight: 700;
+      padding: 1rem 1rem 0;
     }
-    .video-card p {
+    .video-item p {
       padding: 0 1rem 1rem;
-      font-size: 0.75rem;
-      color: #4b5563;
+      font-size: 0.8rem;
+      color: #475569;
     }
     
-    /* Spotify widget */
-    .spotify-card {
-      background: #0a0c10;
-      border-radius: 28px;
-      padding: 1rem;
-      margin-top: 1rem;
+    /* Equipo y más colaboradores */
+    .team-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      background: #ffffff;
+      border-radius: 1.5rem;
+      padding: 1.5rem;
+      border: 1px solid #eef2ff;
     }
-    .footer {
+    .team-member {
+      flex: 1;
+      min-width: 180px;
+      border-right: 1px solid #eef2f5;
+      padding-right: 1rem;
+    }
+    .spotify-embed {
+      background: #0a0f1a;
+      border-radius: 1.5rem;
+      padding: 1.2rem;
+    }
+    footer {
       background: #0f172a;
       color: #94a3b8;
       text-align: center;
       padding: 2rem;
-      margin-top: 2rem;
-      font-size: 0.7rem;
+      margin-top: 3rem;
+      font-size: 0.75rem;
     }
-    @media (max-width: 860px) {
-      .grid-news { grid-template-columns: 1fr; }
-      .hero-content h1 { font-size: 2rem; }
-      .nav-modern a { margin-left: 1rem; }
+    @media (max-width: 780px) {
+      .hero-title { font-size: 2.2rem; }
+      .nav-links a { margin-left: 1rem; }
+      .section-header h2 { font-size: 1.4rem; }
+      .container { padding: 0 1.2rem; }
     }
   </style>
 </head>
 <body>
-
-<header class="header-modern">
-  <div class="header-container">
-    <div class="logo-area">
-      <i class="fas fa-head-side-headphones"></i>
-      <span>INCRIFE FANBASE</span>
-      <div class="badge-fan">no oficial · fans</div>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-icon"><i class="fas fa-microphone-alt"></i></div>
+      <h1>INCRIFE · FANBASE</h1>
+      <div class="badge-fan"><i class="fas fa-heart"></i> Fansite no oficial</div>
     </div>
-    <div class="nav-modern">
-      <a href="#">Inicio</a>
-      <a href="#">Novedades</a>
-      <a href="#">Videoclips</a>
-      <a href="#">Colaboradores</a>
+    <div class="nav-links">
+      <a href="#novedades">Novedades</a>
+      <a href="#colaboradores">Colaboradores</a>
+      <a href="#videoclips">Videoclips</a>
+      <a href="#musica">Música</a>
     </div>
   </div>
 </header>
 
 <main>
-  <!-- Hero sin foto, solo texto + llamado -->
-  <div class="hero-no-img">
-    <div class="hero-content">
-      <h1>INCRIFE · <span class="hero-accent">Toda la actualidad</span> en un solo lugar</h1>
-      <p class="hero-desc">Nuevos temas, productores, videoclips y la escena creativa. Sitio 100% de seguidores, sin fines oficiales. Mantente al día con el universo del artista.</p>
-      <a href="https://open.spotify.com/intl-es/artist/42euHjlNEF6gE3zuWrAJBi" target="_blank" class="spotify-button">
-        <i class="fab fa-spotify fa-lg"></i> Escuchar en Spotify
-      </a>
+  <div class="container">
+    <!-- Hero elegante sin foto de perfil -->
+    <div class="hero-section">
+      <div class="hero-title">INCRIFE · <span>Actualidad y esencia</span></div>
+      <p class="hero-desc">Toda la información sobre nuevos temas, videoclips, productores y colaboradores. Un espacio 100% creado por seguidores, sin afiliación oficial.</p>
+      <a href="https://open.spotify.com/intl-es/artist/42euHjlNEF6gE3zuWrAJBi" target="_blank" class="btn-spotify"><i class="fab fa-spotify"></i> Escuchar en Spotify</a>
     </div>
-  </div>
-  <div class="disclaimer">
-    <i class="fas fa-star-of-life"></i> Fansite independiente — No estamos afiliados a INCRIFE o su management. Toda la info es recopilada por la comunidad.
-  </div>
+    <div class="disclaimer-badge">
+      <i class="fas fa-info-circle"></i> Sitio independiente de fans · No representamos a INCRIFE ni a su management. Datos recopilados por la comunidad.
+    </div>
 
-  <!-- Contenido principal: noticias + colaboradores -->
-  <div class="grid-news">
-    <!-- Columna izquierda: noticias, lanzamientos -->
-    <div>
-      <h2 class="section-title"><i class="fas fa-bullhorn"></i> Novedades y lanzamientos</h2>
-      <article class="news-card">
-        <div class="news-tag"><i class="fas fa-microphone-alt"></i> Nuevo single en estudio</div>
-        <h3>INCRIFE prepara tema inédito con sonido más orgánico</h3>
-        <div class="date-icon"><i class="far fa-calendar-alt"></i> 5 de junio, 2026 · Fuente fan club</div>
-        <p>Según avances en redes sociales, el artista está trabajando con nuevos músicos de sesión. Se espera una balada moderna con arreglos de guitarra acústica y sintetizadores atmosféricos.</p>
-      </article>
-      
-      <article class="news-card">
-        <div class="news-tag"><i class="fas fa-video"></i> Estreno audiovisual</div>
-        <h3>Videoclip "Luces de neón" rompe barreras visuales</h3>
-        <div class="date-icon"><i class="far fa-calendar-alt"></i> 28 de mayo, 2026</div>
-        <p>El equipo de dirección compartió postales del rodaje. La estética mezcla neón y escenarios urbanos. Se espera el lanzamiento oficial durante la segunda quincena de junio.</p>
-      </article>
-      
-      <article class="news-card">
-        <div class="news-tag"><i class="fas fa-handshake"></i> Colaboración sorpresa</div>
-        <h3>Posible colaboración con productor internacional</h3>
-        <div class="date-icon"><i class="far fa-calendar-alt"></i> 20 de mayo, 2026</div>
-        <p>Rumores indican que INCRIFE estaría en conversaciones con un reconocido beatmaker del panorama alternativo. La fusión promete expandir los límites de su sonido característico.</p>
-      </article>
-    </div>
-    
-    <!-- Columna derecha: colaboradores (nómina de trabajo) + Spotify -->
-    <div>
-      <div class="collab-section">
-        <h3><i class="fas fa-users-viewfinder"></i> Colaboradores actuales</h3>
-        <div class="collab-grid">
-          <div class="collab-item">
-            <div class="collab-icon"><i class="fas fa-guitar-electric"></i></div>
-            <div><strong>Producción musical</strong><br><span style="font-size:0.75rem;">Carlos Mora, Valentina Lasso · beats y arreglos 2025/2026</span></div>
-          </div>
-          <div class="collab-item">
-            <div class="collab-icon"><i class="fas fa-clapperboard"></i></div>
-            <div><strong>Dirección de videoclips</strong><br><span style="font-size:0.75rem;">Lucía Fuentes, estudio Panorama · últimos tres videos oficiales</span></div>
-          </div>
-          <div class="collab-item">
-            <div class="collab-icon"><i class="fas fa-head-side-vr"></i></div>
-            <div><strong>Mezcla y master</strong><br><span style="font-size:0.75rem;">Javier Ríos (Estudio M.O.) · nueva era sonora</span></div>
-          </div>
-          <div class="collab-item">
-            <div class="collab-icon"><i class="fas fa-paintbrush-fine"></i></div>
-            <div><strong>Arte visual / diseño</strong><br><span style="font-size:0.75rem;">Colectivo Neón · portadas y concepto gráfico</span></div>
-          </div>
+    <!-- SECCIÓN 1: NOVEDADES (noticias organizadas) -->
+    <section id="novedades" class="section">
+      <div class="section-header">
+        <i class="fas fa-newspaper"></i>
+        <h2>Últimas novedades</h2>
+      </div>
+      <div class="news-grid">
+        <article class="news-card">
+          <span class="news-tag"><i class="fas fa-microphone-alt"></i> Nuevo tema</span>
+          <div class="news-date"><i class="far fa-calendar-alt"></i> 10 de junio, 2026</div>
+          <div class="news-title">INCRIFE adelanta fragmento de "Código Visual"</div>
+          <p>El artista compartió un teaser en redes sociales con atmósferas electrónicas y una producción más orgánica. Se espera lanzamiento a finales de mes.</p>
+        </article>
+        <article class="news-card">
+          <span class="news-tag"><i class="fas fa-video"></i> Detrás de escena</span>
+          <div class="news-date"><i class="far fa-calendar-alt"></i> 5 de junio, 2026</div>
+          <div class="news-title">Grabación del videoclip "Luces de neón"</div>
+          <p>Imágenes exclusivas del rodaje muestran una dirección artística inspirada en el cine ochentero. El estreno sería en los próximos días.</p>
+        </article>
+        <article class="news-card">
+          <span class="news-tag"><i class="fas fa-handshake"></i> Colaboración</span>
+          <div class="news-date"><i class="far fa-calendar-alt"></i> 1 de junio, 2026</div>
+          <div class="news-title">Posible colaboración con productor internacional</div>
+          <p>Se rumorea que INCRIFE está en estudio con un reconocido beatmaker del indie electrónico. La fusión promete sorprender a la audiencia.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: COLABORADORES (productores, equipo visual, músicos) -->
+    <section id="colaboradores" class="section">
+      <div class="section-header">
+        <i class="fas fa-users"></i>
+        <h2>Colaboradores y equipo creativo</h2>
+      </div>
+      <div class="collab-grid">
+        <div class="collab-card">
+          <div class="collab-avatar"><i class="fas fa-guitar"></i></div>
+          <div><strong>Producción musical</strong><br><span style="font-size:0.8rem;">Carlos Mora · beats, sintetizadores (2025-2026)</span></div>
         </div>
-        <p style="font-size:0.7rem; margin-top: 12px;"><i class="fas fa-circle-info"></i> Colaboradores recopilados por la comunidad de fans.</p>
+        <div class="collab-card">
+          <div class="collab-avatar"><i class="fas fa-clapperboard"></i></div>
+          <div><strong>Dirección audiovisual</strong><br><span style="font-size:0.8rem;">Lucía Fuentes · videoclips y arte visual</span></div>
+        </div>
+        <div class="collab-card">
+          <div class="collab-avatar"><i class="fas fa-headphones"></i></div>
+          <div><strong>Ingeniero de mezcla</strong><br><span style="font-size:0.8rem;">Javier Ríos · estudio M.O.</span></div>
+        </div>
+        <div class="collab-card">
+          <div class="collab-avatar"><i class="fas fa-paintbrush-fine"></i></div>
+          <div><strong>Concepto gráfico</strong><br><span style="font-size:0.8rem;">Colectivo Neón · portadas y diseño</span></div>
+        </div>
       </div>
-      
-      <!-- Reproductor Spotify oficial -->
-      <div class="spotify-card">
-        <h4 style="color:#e2e8f0; display:flex; gap:8px;"><i class="fab fa-spotify" style="color:#1DB954;"></i> INCRIFE en Spotify</h4>
-        <iframe style="border-radius:16px" src="https://open.spotify.com/embed/artist/42euHjlNEF6gE3zuWrAJBi?utm_source=generator" width="100%" height="280" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <!-- Más detalles de colaboradores en bloque adicional -->
+      <div style="margin-top: 1.2rem; background:#f1f5f9; border-radius: 1.2rem; padding: 0.8rem 1.2rem;">
+        <p style="font-size:0.75rem;"><i class="fas fa-music"></i> También colaboran: <strong>Valentina Lasso</strong> (arreglos), <strong>Nico Rueda</strong> (masterización), <strong>Mariana Pérez</strong> (fotografía).</p>
       </div>
-    </div>
-  </div>
-  
-  <!-- SECCIÓN VIDEOCLIPS ÚLTIMOS (novedad destacada) -->
-  <div class="videos-section">
-    <h2 class="section-title"><i class="fas fa-play-circle"></i> Videoclips recientes · Imprescindibles</h2>
-    <div class="videos-grid">
-      <div class="video-card">
-        <div class="video-thumb"><i class="fas fa-film fa-3x"></i></div>
-        <h4>“Destellos” (2026)</h4>
-        <p>Videoclip oficial con estética futurista y coreografía. Dirigido por Lucía Fuentes.</p>
-        <div style="padding:0 1rem 1rem;"><i class="fab fa-youtube" style="color:#c4302b;"></i> Próximo estreno en canal oficial</div>
+    </section>
+
+    <!-- SECCIÓN 3: VIDEOCLIPS RECIENTES -->
+    <section id="videoclips" class="section">
+      <div class="section-header">
+        <i class="fas fa-play-circle"></i>
+        <h2>Videoclips destacados</h2>
       </div>
-      <div class="video-card">
-        <div class="video-thumb"><i class="fas fa-camera-retro fa-3x"></i></div>
-        <h4>“Detrás del Espejo” (2025)</h4>
-        <p>Grabado en locaciones abandonadas, mezcla de luces led y narrativa onírica.</p>
-        <div style="padding:0 1rem 1rem;"><i class="fab fa-youtube"></i> +150k visualizaciones en comunidad</div>
+      <div class="videos-grid">
+        <div class="video-item">
+          <div class="video-thumb"><i class="fas fa-film fa-3x"></i></div>
+          <h4>“Destellos” (2026)</h4>
+          <p>Estética futurista y narrativa visual. Dirigido por Lucía Fuentes. Próximo estreno en YouTube.</p>
+        </div>
+        <div class="video-item">
+          <div class="video-thumb"><i class="fas fa-camera-retro fa-3x"></i></div>
+          <h4>“Detrás del Espejo” (2025)</h4>
+          <p>Grabado en locaciones abandonadas, mezcla de luces y simbolismo onírico.</p>
+        </div>
+        <div class="video-item">
+          <div class="video-thumb"><i class="fas fa-music fa-3x"></i></div>
+          <h4>“Aura” (Sesión en vivo)</h4>
+          <p>Presentación acústica grabada en estudio con músicos invitados y arreglos de cuerdas.</p>
+        </div>
       </div>
-      <div class="video-card">
-        <div class="video-thumb"><i class="fas fa-music fa-3x"></i></div>
-        <h4>“Aura” (sesión en vivo)</h4>
-        <p>Presentación acústica grabada en estudio con músicos invitados.</p>
-        <div style="padding:0 1rem 1rem;"><i class="fab fa-spotify"></i> Disponible en plataformas</div>
+    </section>
+
+    <!-- SECCIÓN 4: MÚSICA Y SPOTIFY + NUEVOS TEMAS -->
+    <section id="musica" class="section">
+      <div class="section-header">
+        <i class="fab fa-spotify"></i>
+        <h2>Escucha · Nuevos temas</h2>
       </div>
-    </div>
-  </div>
-  
-  <!-- Sección de colaboradores adicionales, productores invitados y news extra -->
-  <div style="max-width: 1280px; margin: 0 auto 2rem; padding: 0 2rem;">
-    <div style="background: #eef2ff; border-radius: 32px; padding: 1.5rem;">
-      <h3 style="display: flex; gap: 10px;"><i class="fas fa-handshake"></i> Más colaboradores en la escena</h3>
-      <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 12px;">
-        <div><strong>🎛️ Productor adicional:</strong> Nico Rueda (mezcla)</div>
-        <div><strong>📸 Fotógrafo oficial:</strong> Mariana Pérez</div>
-        <div><strong>🎹 Músico invitado:</strong> Emilio Santos (pianos y sintetizadores)</div>
+      <div class="team-row" style="margin-bottom: 1.8rem;">
+        <div class="team-member"><strong><i class="fas fa-waveform"></i> Próximos lanzamientos</strong><br>• "Código Visual" (single)<br>• "Luces de neón" (versión extendida)<br>• Colaboración con DJ alternativo</div>
+        <div class="team-member"><strong><i class="fas fa-head-side-vr"></i> En estudio</strong><br>Nuevo EP con 5 canciones, producción ejecutiva a cargo de Carlos Mora y mezcla en Londres.</div>
       </div>
-    </div>
-  </div>
-  
-  <!-- Galería de imágenes promocionales (sin foto principal duplicada) -->
-  <div class="videos-section" style="margin-top: 0;">
-    <h2 class="section-title"><i class="fas fa-images"></i> Momentos visuales · Detrás de cámaras</h2>
-    <div class="videos-grid">
-      <div class="video-card">
-        <div style="background:#eef2ff; height:150px; display:flex; align-items:center; justify-content:center;"><i class="fas fa-camera fa-2x"></i></div>
-        <p style="padding:0.8rem;">Sesión fotográfica para nuevo single · Estilo crudo y urbano.</p>
+      <div class="spotify-embed">
+        <h4 style="color:#e2e8f0; display: flex; gap: 8px; margin-bottom: 12px;"><i class="fab fa-spotify" style="color:#1DB954;"></i> INCRIFE en Spotify (oficial)</h4>
+        <iframe style="border-radius:16px" src="https://open.spotify.com/embed/artist/42euHjlNEF6gE3zuWrAJBi?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
-      <div class="video-card">
-        <div style="background:#eef2ff; height:150px; display:flex; align-items:center; justify-content:center;"><i class="fas fa-microphone-alt fa-2x"></i></div>
-        <p style="padding:0.8rem;">Grabación de voces en estudio, equipo de producción completo.</p>
-      </div>
-      <div class="video-card">
-        <div style="background:#eef2ff; height:150px; display:flex; align-items:center; justify-content:center;"><i class="fas fa-palette fa-2x"></i></div>
-        <p style="padding:0.8rem;">Arte conceptual realizado por el colectivo creativo.</p>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Llamada final a redes y Spotify -->
-  <div style="max-width: 1280px; margin: 1rem auto 2rem; padding: 0 2rem;">
-    <div style="background: #1e293b; border-radius: 40px; padding: 1rem 2rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; color: #cbd5e1;">
-      <span><i class="fab fa-spotify"></i> Sigue la lista de reproducción oficial de fans</span>
-      <div style="display: flex; gap: 18px;">
-        <a href="https://www.instagram.com/incrife/" target="_blank" style="color:#ddd;"><i class="fab fa-instagram fa-lg"></i></a>
-        <a href="https://www.youtube.com/@incrife" target="_blank" style="color:#ddd;"><i class="fab fa-youtube fa-lg"></i></a>
-        <a href="https://x.com/Incrife" target="_blank" style="color:#ddd;"><i class="fab fa-twitter fa-lg"></i></a>
+    </section>
+
+    <!-- Bloque extra: frases o equipo extendido -->
+    <div style="background: #ffffff; border-radius: 1.5rem; padding: 1.2rem; margin: 2rem 0; border: 1px solid #e2edff;">
+      <div style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between;">
+        <div><i class="fas fa-head-side-vr"></i> <strong>Management creativo:</strong> equipo independiente</div>
+        <div><i class="fas fa-calendar-week"></i> <strong>Próximas fechas:</strong> anuncio de live session</div>
+        <div><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/incrife/" target="_blank" style="color:#2563eb;">Seguir en Instagram oficial</a></div>
       </div>
     </div>
   </div>
 </main>
 
-<footer class="footer">
-  <p>INCRIFE Fansite — espacio 100% independiente creado por seguidores. No representa a INCRIFE ni a su equipo oficial. Todos los derechos de música e imágenes pertenecen a sus respectivos autores.</p>
-  <p style="margin-top: 8px;">📢 Dato: mantenemos la información sobre colaboradores, videoclips y novedades basados en fuentes abiertas · #SomosFans</p>
-  <p style="margin-top: 12px;"><a href="https://open.spotify.com/intl-es/artist/42euHjlNEF6gE3zuWrAJBi" target="_blank" style="color:#94a3b8;"><i class="fab fa-spotify"></i> Escucha a INCRIFE en Spotify oficial</a></p>
+<footer>
+  <p>INCRIFE · Fansite independiente — Sin afiliación oficial. Todo el contenido es recopilado por seguidores con fines informativos y de difusión cultural.</p>
+  <p style="margin-top: 0.5rem;">📢 Colaboradores, videoclips y novedades actualizadas por la comunidad de fans #INCRIFEFamily</p>
+  <p style="margin-top: 0.8rem;"><a href="https://open.spotify.com/intl-es/artist/42euHjlNEF6gE3zuWrAJBi" target="_blank" style="color:#94a3b8;"><i class="fab fa-spotify"></i> Escuchar en Spotify · Música oficial</a></p>
 </footer>
 
-<!-- Script meramente decorativo -->
 <script>
-  // El sitio no requiere login, solo noticias y novedades (SEO completo)
-  console.log("Fansite INCRIFE - Colaboradores y videoclips sección actualizada");
+  // Script solo para funcionalidad pasiva
+  console.log("INCRIFE Fansite - Secciones ordenadas, tipografía profesional, sin login.");
 </script>
 </body>
 </html>
