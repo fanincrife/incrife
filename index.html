@@ -3,77 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>INCRIFE Fan Club | Comunidad Oficial de Fans</title>
+  <title>INCRIFE · Noticias y Novedades | Fansite No Oficial</title>
   
-  <!-- ========== SEO (MISMO CONTENIDO OPTIMIZADO) ========== -->
-  <meta name="description" content="INCRIFE Fan Zone: La comunidad oficial de fans de INCRIFE. Únete gratis, comparte contenido, conoce a otros fans y accede a material exclusivo del artista.">
-  <meta name="keywords" content="incrife fans, comunidad incrife, fan zone incrife, red social fans, incrife fan club, contenido exclusivo incrife">
-  <meta name="author" content="INCRIFE Fan Zone">
+  <!-- ========== SEO OPTIMIZADO ========== -->
+  <meta name="description" content="INCRIFE Fansite: toda la actualidad, novedades, nuevos temas, imágenes y música del artista. Comunidad no oficial de seguidores.">
+  <meta name="keywords" content="incrife noticias, novedades incrife, nuevos temas incrife, incrife spotify, fan site incrife, incrife actualidad">
+  <meta name="author" content="INCRIFE Fan Club (No Oficial)">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-  <link rel="canonical" href="https://incrifefan.com">
+  <link rel="canonical" href="https://incrifefansite.com">
   
-  <meta property="og:title" content="INCRIFE Fan Zone | Comunidad Oficial de Fans">
-  <meta property="og:description" content="La comunidad oficial de fans de INCRIFE. Únete gratis y comparte tu pasión.">
-  <meta property="og:url" content="https://incrifefan.com">
+  <meta property="og:title" content="INCRIFE · Noticias y Novedades | Fansite No Oficial">
+  <meta property="og:description" content="Actualidad, nuevos temas, discografía y contenido exclusivo de INCRIFE. El mejor punto de encuentro para fans.">
+  <meta property="og:url" content="https://incrifefansite.com">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://raw.githubusercontent.com/incrife/incrife/main/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(57).png">
   
-  <meta name="theme-color" content="#cc0000">
+  <meta name="theme-color" content="#1DB954">
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/incrife/incrife/main/favicon-32x32.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@300;400;500;600;700;800&family=Montserrat:wght@600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@300;400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: #03000c;
-      font-family: 'Poppins', 'Inter', sans-serif;
-      color: #f0f0f0;
+      background: #f9f7f3;
+      font-family: 'Inter', sans-serif;
+      color: #1e1a1a;
       overflow-x: hidden;
-      position: relative;
     }
     
-    /* === NUEVO FONDO DINÁMICO: ONDAS GRADIENTE Y GLOW === */
-    .wave-bg {
-      position: fixed;
+    /* Header limpio tipo revista musical */
+    .header-mag {
+      position: sticky;
       top: 0;
-      left: 0;
       width: 100%;
-      height: 100%;
-      z-index: 0;
-      background: radial-gradient(circle at 10% 20%, #0a0212, #020003);
-      overflow: hidden;
-    }
-    .wave-bg::before {
-      content: '';
-      position: absolute;
-      width: 200%;
-      height: 200%;
-      top: -50%;
-      left: -50%;
-      background: radial-gradient(ellipse at 30% 40%, rgba(204,0,0,0.15) 0%, rgba(0,0,0,0) 60%);
-      animation: rotateGlow 25s infinite linear;
-    }
-    @keyframes rotateGlow {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    
-    /* Header modern glass + borde neón */
-    .header-crew {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      padding: 1rem 2rem;
-      background: rgba(3,0,12,0.7);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid rgba(204,0,0,0.5);
-      box-shadow: 0 0 15px rgba(204,0,0,0.2);
+      z-index: 100;
+      background: rgba(255, 255, 245, 0.96);
+      backdrop-filter: blur(4px);
+      border-bottom: 1px solid #e0dbcf;
+      padding: 0.8rem 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
     }
     .header-container {
-      max-width: 1300px;
+      max-width: 1280px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
@@ -81,611 +53,448 @@
       flex-wrap: wrap;
       gap: 1rem;
     }
-    .logo-crew {
+    .logo-fansite {
       display: flex;
       align-items: center;
       gap: 12px;
     }
-    .logo-crew img {
+    .logo-fansite img {
       height: 48px;
       width: 48px;
       border-radius: 50%;
-      border: 2px solid #cc0000;
-      box-shadow: 0 0 8px #ff4444;
+      border: 2px solid #1DB954;
     }
-    .logo-crew span {
-      font-size: 1.6rem;
+    .logo-fansite span {
+      font-size: 1.5rem;
       font-weight: 800;
-      background: linear-gradient(135deg, #fff, #ff9999);
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #1DB954, #191414);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      letter-spacing: 1px;
-      font-family: 'Montserrat', sans-serif;
     }
-    .nav-crew {
+    .badge-no-oficial {
+      background: #ece8e0;
+      padding: 4px 12px;
+      border-radius: 40px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: #5a4a3a;
+    }
+    .nav-links {
       display: flex;
-      gap: 2rem;
-      align-items: center;
+      gap: 1.8rem;
     }
-    .nav-crew a {
-      color: #f0e6ff;
+    .nav-links a {
       text-decoration: none;
-      font-size: 0.9rem;
+      color: #2c241a;
       font-weight: 500;
       transition: 0.2s;
-      position: relative;
+      font-size: 0.9rem;
     }
-    .nav-crew a:hover { color: #ff6666; text-shadow: 0 0 4px #cc0000; }
-    .nav-crew a.active { color: #ff4444; }
-    .nav-crew a.active::after {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: #cc0000;
-      box-shadow: 0 0 6px red;
-    }
-    .btn-crew {
-      background: linear-gradient(95deg, #cc0000, #ff2a2a);
-      padding: 0.5rem 1.4rem;
-      border-radius: 60px;
-      color: white;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.85rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(204,0,0,0.3);
-    }
-    .btn-crew:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(204,0,0,0.5); background: #ff3333; }
-    .btn-outline-crew {
-      background: transparent;
-      border: 1px solid #ff5555;
-      padding: 0.5rem 1.2rem;
-      border-radius: 60px;
-      color: #ffcccc;
-      font-weight: 600;
-      transition: 0.2s;
-    }
-    .btn-outline-crew:hover { background: #cc0000; color: white; border-color: #cc0000; }
-    .mobile-toggle {
-      display: none;
-      background: none;
-      border: none;
-      color: white;
-      font-size: 1.7rem;
-      cursor: pointer;
-    }
+    .nav-links a:hover { color: #1DB954; }
     
-    /* Hero con efecto neón tipográfico */
-    .hero-neon {
-      min-height: 85vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      position: relative;
-      padding: 7rem 2rem 4rem;
+    /* Hero con portada y llamado a spotify */
+    .hero-news {
+      max-width: 1280px;
+      margin: 2rem auto 1rem;
+      padding: 0 2rem;
     }
-    .hero-content {
-      z-index: 2;
-      max-width: 850px;
-    }
-    .hero-neon h1 {
-      font-size: 4.6rem;
-      font-weight: 800;
-      font-family: 'Montserrat', sans-serif;
-      text-shadow: 0 0 12px #cc0000, 0 0 25px #ff4444;
-      letter-spacing: -0.02em;
-      margin-bottom: 1rem;
-      animation: glitch 1.2s infinite alternate;
-    }
-    @keyframes glitch {
-      0% { text-shadow: 0 0 5px #cc0000; }
-      100% { text-shadow: 0 0 20px #ff6666, 0 0 5px #ff0000; }
-    }
-    .hero-neon .neon-text {
-      background: linear-gradient(135deg, #fff, #ff8888);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-    .hero-neon p {
-      font-size: 1.2rem;
-      color: #d9cfe6;
-      margin-bottom: 2.2rem;
-      backdrop-filter: blur(2px);
-    }
-    .hero-buttons {
-      display: flex;
-      gap: 1.2rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    
-    /* Stats con diseño futurista */
-    .stats-futuristic {
-      display: flex;
-      justify-content: center;
-      gap: 3rem;
-      flex-wrap: wrap;
-      max-width: 1000px;
-      margin: 0 auto 2rem;
-      padding: 1.2rem 2rem;
-      background: rgba(20,5,30,0.6);
-      backdrop-filter: blur(12px);
-      border-radius: 80px;
-      border: 1px solid rgba(204,0,0,0.4);
-    }
-    .stat-item {
-      text-align: center;
-    }
-    .stat-item .digit {
-      font-size: 2.3rem;
-      font-weight: 800;
-      font-family: monospace;
-      color: #ff6666;
-      text-shadow: 0 0 5px #cc0000;
-    }
-    .stat-item .caption {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: #aa99cc;
-    }
-    
-    /* Layout principal: grid con nuevo estilo */
-    .main-grid {
-      max-width: 1300px;
-      margin: 0 auto;
-      padding: 2rem;
+    .hero-grid {
       display: grid;
-      grid-template-columns: 1fr 2.2fr 1fr;
-      gap: 1.8rem;
-      position: relative;
-      z-index: 10;
-    }
-    
-    /* Cards glassmorph elevadas */
-    .glass-card {
-      background: rgba(12,6,20,0.65);
-      backdrop-filter: blur(18px);
+      grid-template-columns: 1.5fr 1fr;
+      gap: 2rem;
+      background: #ffffff;
       border-radius: 32px;
-      border: 1px solid rgba(204,80,80,0.3);
-      padding: 1.3rem;
-      transition: all 0.3s;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+      overflow: hidden;
     }
-    .glass-card:hover { border-color: #cc0000; box-shadow: 0 8px 20px rgba(204,0,0,0.2); }
-    
-    .trending-list-new li {
-      list-style: none;
-      padding: 0.7rem 0;
-      border-bottom: 1px solid rgba(204,0,0,0.15);
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      font-size: 0.8rem;
+    .hero-text {
+      padding: 2rem 2rem;
     }
-    .trending-hashtag { color: #ff7777; font-weight: 600; }
-    
-    /* Feed central */
-    .feed-header-new {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1.4rem;
-      border-bottom: 1px dashed #cc4444;
-      padding-bottom: 0.6rem;
-    }
-    .create-post-area {
-      background: rgba(0,0,0,0.4);
-      border-radius: 28px;
-      padding: 1rem;
-      margin-bottom: 1.8rem;
-    }
-    .create-post-area textarea {
-      width: 100%;
-      background: #1e1028;
-      border: 1px solid #aa4477;
-      border-radius: 24px;
-      padding: 0.9rem;
-      color: white;
-      font-family: inherit;
-      resize: vertical;
-    }
-    .post-actions {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 0.7rem;
-    }
-    .icon-group i { color: #aa88aa; margin-right: 12px; font-size: 1.2rem; cursor: pointer; transition: 0.2s; }
-    .icon-group i:hover { color: #ff5555; text-shadow: 0 0 4px red; }
-    .publish-btn {
-      background: #cc0000;
-      border: none;
-      padding: 0.4rem 1.5rem;
+    .hero-text .etiqueta {
+      background: #1DB95420;
+      display: inline-block;
+      padding: 4px 12px;
       border-radius: 30px;
-      font-weight: bold;
-      cursor: pointer;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #1e6f3f;
+      margin-bottom: 1rem;
+    }
+    .hero-text h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .hero-text p {
+      color: #4b3b2c;
+      margin-bottom: 1.8rem;
+      line-height: 1.4;
+    }
+    .spotify-btn {
+      background: #1DB954;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0.8rem 1.8rem;
+      border-radius: 60px;
       color: white;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s;
+      box-shadow: 0 4px 10px rgba(29,185,84,0.3);
+    }
+    .spotify-btn:hover { background: #0d9e46; transform: scale(1.02); }
+    .hero-img {
+      background: linear-gradient(145deg, #d9cdb0, #f2e8da);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .hero-img img {
+      max-width: 100%;
+      border-radius: 28px;
+      box-shadow: 0 15px 20px rgba(0,0,0,0.1);
     }
     
-    .post-card-new {
-      background: #0c0418b3;
+    /* Disclaimer Fansite */
+    .disclaimer-fan {
+      max-width: 1280px;
+      margin: 1.5rem auto 0;
+      padding: 0.6rem 2rem;
+      background: #f1ede5;
+      border-radius: 60px;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #7f6b58;
+    }
+    
+    /* Layout noticias + novedades */
+    .main-news {
+      max-width: 1280px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+    }
+    
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      border-left: 5px solid #1DB954;
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .news-card {
+      background: white;
       border-radius: 24px;
-      margin-bottom: 1rem;
-      padding: 1rem;
-      border-left: 4px solid #cc0000;
+      padding: 1.4rem;
+      margin-bottom: 1.8rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+      border: 1px solid #efeadf;
       transition: all 0.2s;
     }
-    .post-header {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
+    .news-card:hover { border-color: #d0c8b8; box-shadow: 0 8px 20px rgba(0,0,0,0.05); }
+    .news-tag {
+      display: inline-block;
+      background: #f3ede3;
+      border-radius: 40px;
+      padding: 2px 12px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #ad8a62;
+      margin-bottom: 12px;
+    }
+    .news-card h3 {
+      font-size: 1.4rem;
       margin-bottom: 0.6rem;
     }
-    .avatar-post {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      border: 1px solid #ff7777;
-    }
-    .post-meta { font-size: 0.7rem; color: #b9a6d4; }
-    .post-content-text { font-size: 0.85rem; margin: 0.5rem 0 0.7rem; padding-left: 0.5rem; border-left: 2px solid #ff5555; }
-    .post-engagement button {
-      background: none;
-      border: none;
-      color: #bb99cc;
-      margin-right: 1rem;
-      cursor: pointer;
-      font-size: 0.75rem;
-    }
-    .post-engagement button i { margin-right: 4px; }
-    .post-engagement button:hover { color: #ff7777; }
-    
-    /* Miembros online estilo círculos con glow */
-    .members-glow {
+    .news-date {
+      font-size: 0.7rem;
+      color: #9f8b72;
+      margin-bottom: 0.8rem;
       display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-      margin: 1rem 0;
+      align-items: center;
+      gap: 8px;
     }
-    .member-glow {
-      width: 55px;
-      height: 55px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid #ff5555;
-      box-shadow: 0 0 10px #cc0000;
-      transition: transform 0.2s;
-    }
-    .join-community-btn {
-      background: linear-gradient(90deg, #aa2222, #cc0000);
-      width: 100%;
-      padding: 10px;
-      border: none;
-      border-radius: 40px;
-      font-weight: bold;
-      color: white;
-      cursor: pointer;
-      margin-top: 1rem;
+    .news-excerpt {
+      color: #3e3327;
+      line-height: 1.4;
     }
     
-    /* Galería estilo collage */
-    .gallery-grid-new {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    /* Quién trabaja con INCRIFE */
+    .team-section {
+      background: #ffffffec;
+      border-radius: 28px;
+      padding: 1.2rem;
+      border: 1px solid #e5ddcf;
+      margin-bottom: 2rem;
+    }
+    .team-section h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .team-list {
+      display: flex;
+      flex-direction: column;
       gap: 1rem;
     }
-    .gallery-item {
-      background: #10051c;
-      border-radius: 28px;
-      overflow: hidden;
-      transition: 0.2s;
-      cursor: pointer;
-      border: 1px solid #5a2a5a;
+    .team-member {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid #eee5d9;
+      padding-bottom: 0.8rem;
     }
-    .gallery-item img { width: 100%; height: 150px; object-fit: cover; transition: 0.3s; }
-    .gallery-item:hover { transform: scale(0.98); border-color: #cc0000; }
-    .gallery-item p { padding: 0.5rem; font-size: 0.7rem; text-align: center; color: #bb99dd; }
-    
-    /* Social vertical scroll fresh */
-    .social-links-new {
-      background: radial-gradient(circle at 30% 10%, #1a0b24, #03000c);
-      border-radius: 60px;
-      padding: 1.5rem;
-      text-align: center;
-      margin: 1rem auto;
-      max-width: 500px;
-    }
-    .social-icons-row a {
-      display: inline-flex;
+    .member-icon {
       width: 48px;
       height: 48px;
-      background: #1e102a;
-      margin: 0 8px;
-      border-radius: 50%;
+      background: #e8dfd1;
+      border-radius: 60px;
+      display: flex;
       align-items: center;
       justify-content: center;
-      color: #ffaaaa;
       font-size: 1.4rem;
-      transition: all 0.2s;
+      color: #6b4e2e;
     }
-    .social-icons-row a:hover { background: #cc0000; color: white; transform: translateY(-5px); }
+    .member-info strong { display: block; font-size: 0.9rem; }
+    .member-info span { font-size: 0.7rem; color: #7d6852; }
+    
+    /* Reproductor de Spotify (novedades musicales) */
+    .spotify-widget {
+      background: #191414;
+      border-radius: 28px;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+    .spotify-widget h4 {
+      color: #fff;
+      margin-bottom: 0.8rem;
+      font-size: 1rem;
+    }
+    iframe {
+      border-radius: 16px;
+      width: 100%;
+    }
+    
+    /* Galería de novedades visuales */
+    .gallery-moments {
+      margin: 2rem auto;
+      max-width: 1280px;
+      padding: 0 2rem;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1rem;
+    }
+    .gallery-item {
+      background: #fff;
+      border-radius: 24px;
+      overflow: hidden;
+      transition: 0.2s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+    }
+    .gallery-item p {
+      padding: 0.8rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-align: center;
+    }
     
     footer {
-      text-align: center;
+      background: #16120c;
+      margin-top: 3rem;
       padding: 2rem;
-      border-top: 1px solid #cc444455;
+      text-align: center;
+      color: #cbbfaa;
       font-size: 0.7rem;
-      color: #8a6c9e;
     }
     
-    @media (max-width: 1024px) {
-      .main-grid { grid-template-columns: 1fr; }
-      .hero-neon h1 { font-size: 2.8rem; }
-    }
-    @media (max-width: 760px) {
-      .nav-crew { display: none; }
-      .mobile-toggle { display: block; }
-      .stats-futuristic { gap: 1rem; }
-      .stat-item .digit { font-size: 1.4rem; }
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .main-news { grid-template-columns: 1fr; }
+      .nav-links { gap: 1rem; }
+      .hero-text h1 { font-size: 1.8rem; }
     }
   </style>
 </head>
 <body>
-<div class="wave-bg"></div>
 
-<header class="header-crew">
+<header class="header-mag">
   <div class="header-container">
-    <div class="logo-crew">
-      <img src="https://raw.githubusercontent.com/incrife/incrife/main/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(57).png" alt="INCRIFE">
-      <span>CREW</span>
+    <div class="logo-fansite">
+      <img src="https://raw.githubusercontent.com/incrife/incrife/main/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(57).png" alt="INCRIFE Fanclub">
+      <span>INCRIFE · NOTICIAS</span>
+      <div class="badge-no-oficial">FAN SITE NO OFICIAL</div>
     </div>
-    <div class="nav-crew" id="navMenuCrew">
-      <a href="#" class="active">INICIO</a>
-      <a href="#">COMUNIDAD</a>
-      <a href="#">MOMENTOS</a>
-      <a href="#">EVENTOS</a>
-      <a href="#">SHOP</a>
+    <div class="nav-links">
+      <a href="#">Inicio</a>
+      <a href="#">Novedades</a>
+      <a href="#">Música</a>
+      <a href="#">Colaboradores</a>
     </div>
-    <div class="nav-crew">
-      <a href="#" class="btn-outline-crew" id="loginBtnNew">Acceder</a>
-      <a href="#" class="btn-crew" id="signupBtnNew">Unirme</a>
-    </div>
-    <button class="mobile-toggle" id="mobileBtnCrew"><i class="fas fa-bolt"></i></button>
   </div>
 </header>
 
 <main>
-  <section class="hero-neon">
-    <div class="hero-content">
-      <h1>#<span class="neon-text">INCRIFE</span> <br>FAN ARMY</h1>
-      <p>La base oficial donde vivimos la música, el arte y la comunidad. Contenido único, conexión real y perks exclusivos.</p>
-      <div class="hero-buttons">
-        <a href="#" class="btn-crew" id="heroJoinBtn"><i class="fas fa-crown"></i> Ser miembro</a>
-        <a href="#" class="btn-outline-crew"><i class="fab fa-instagram"></i> Explorar</a>
+  <!-- Hero con llamado a Spotify y presentación -->
+  <div class="hero-news">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <div class="etiqueta"><i class="fab fa-spotify"></i> ESCUCHA AHORA</div>
+        <h1>Lo último de <br>INCRIFE en un solo lugar</h1>
+        <p>Toda la actualidad, nuevos temas, colaboraciones y el universo creativo del artista. Somos un espacio de fans, sin fines oficiales, para mantenerte al día.</p>
+        <a href="https://open.spotify.com/intl-es/artist/42euHjlNEF6gE3zuWrAJBi" target="_blank" class="spotify-btn">
+          <i class="fab fa-spotify fa-lg"></i> Seguir en Spotify
+        </a>
+      </div>
+      <div class="hero-img">
+        <img src="https://raw.githubusercontent.com/incrife/incrife/main/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(57).png" alt="INCRIFE perfil">
       </div>
     </div>
-  </section>
-
-  <div class="stats-futuristic">
-    <div class="stat-item"><div class="digit">3.2K+</div><div class="caption">Fans activos</div></div>
-    <div class="stat-item"><div class="digit">890+</div><div class="caption">Posts originales</div></div>
-    <div class="stat-item"><div class="digit">240+</div><div class="caption">Contenido exclusivo</div></div>
-    <div class="stat-item"><div class="digit">🌐 32</div><div class="caption">Países</div></div>
+    <div class="disclaimer-fan">
+      <i class="fas fa-heart" style="color:#1DB954;"></i> Sitio creado por fans para fans · No estamos afiliados oficialmente a INCRIFE o su management.
+    </div>
   </div>
 
-  <div class="main-grid">
-    <!-- Sidebar izquierda: Trends + noticias -->
-    <aside class="glass-card">
-      <h3 style="color:#ff8888; margin-bottom: 1rem;"><i class="fas fa-bolt"></i> Trendy en el Club</h3>
-      <ul class="trending-list-new">
-        <li><i class="fas fa-fire" style="color:#ff5555;"></i> <span class="trending-hashtag">#NuevoSingleINCRIFE</span> <span style="margin-left: auto; font-size: 0.7rem;">1.2k posts</span></li>
-        <li><i class="fas fa-music"></i> <span class="trending-hashtag">#DetrásDelMicro</span></li>
-        <li><i class="fas fa-palette"></i> <span class="trending-hashtag">#FanArtWeek</span></li>
-        <li><i class="fas fa-video"></i> <span class="trending-hashtag">#LiveSession</span></li>
-        <li><i class="fas fa-heart"></i> <span class="trending-hashtag">#INCRIFEForever</span></li>
-      </ul>
-      <div style="margin-top: 1rem; border-top: 1px solid #442244; padding-top: 1rem;">
-        <p style="font-size:0.7rem;"><i class="fas fa-gem"></i> Contenido premium cada viernes</p>
-      </div>
-    </aside>
-
-    <!-- Feed central -->
-    <div class="glass-card" style="padding: 1.5rem;">
-      <div class="feed-header-new">
-        <h3><i class="fas fa-users"></i> Muro de la Familia</h3>
-        <span style="font-size:0.7rem; background:#cc000033; padding:4px 8px; border-radius:40px;">🔥 En vivo</span>
-      </div>
-      <div id="createPostContainerNew" style="display: none;" class="create-post-area">
-        <textarea id="newPostText" rows="2" placeholder="Comparte tu energía, fan art, opinión... 🔥"></textarea>
-        <div class="post-actions">
-          <div class="icon-group"><i class="fas fa-camera"></i><i class="fas fa-gif"></i><i class="fas fa-headphones"></i></div>
-          <button class="publish-btn" id="publishPostNew">PUBLICAR</button>
+  <!-- Contenido principal: Noticias + Novedades musicales / equipo -->
+  <div class="main-news">
+    <!-- Columna izquierda: noticias y lanzamientos -->
+    <div>
+      <h2 class="section-title"><i class="fas fa-newspaper"></i> Novedades & rumores creativos</h2>
+      
+      <article class="news-card">
+        <div class="news-tag">🔔 PRÓXIMO LANZAMIENTO</div>
+        <h3>INCRIFE prepara un nuevo tema para el verano</h3>
+        <div class="news-date"><i class="far fa-calendar-alt"></i> 2 de junio, 2026 · Fuente fan club</div>
+        <p class="news-excerpt">Según declaraciones en redes, el artista ya está en estudio con nuevos productores. Se rumorea un sonido más orgánico y colaboraciones inesperadas. La base de fans ya está emocionada.</p>
+      </article>
+      
+      <article class="news-card">
+        <div class="news-tag">🎥 DETRÁS DE CÁMARAS</div>
+        <h3>Grabación de videoclip en locaciones urbanas</h3>
+        <div class="news-date"><i class="far fa-calendar-alt"></i> 28 de mayo, 2026</div>
+        <p class="news-excerpt">Compartieron fragmentos del making of con estética cinematográfica. Se espera que el audiovisual acompañe al próximo single. El estilo visual mezcla neón y texturas crudas.</p>
+      </article>
+      
+      <article class="news-card">
+        <div class="news-tag">🎧 COLABORACIÓN</div>
+        <h3>Posible feat con artista emergente del indie</h3>
+        <div class="news-date"><i class="far fa-calendar-alt"></i> 20 de mayo, 2026</div>
+        <p class="news-excerpt">Circula la posibilidad de una colaboración que fusionaría el pop alternativo con toques electrónicos. Ambos artistas han interactuado en redes recientemente.</p>
+      </article>
+      
+      <article class="news-card">
+        <div class="news-tag">📀 DISCOGRAFÍA</div>
+        <h3>Remasterización de los primeros tracks</h3>
+        <div class="news-date"><i class="far fa-calendar-alt"></i> 15 de mayo, 2026</div>
+        <p class="news-excerpt">Se comenta que los temas iniciales serán relanzados con nueva mezcla y artwork renovado, ideal para nuevos fans que quieran conocer la evolución.</p>
+      </article>
+    </div>
+    
+    <!-- Columna derecha: colaboradores, quienes trabajan y Spotify embed -->
+    <div>
+      <div class="team-section">
+        <h3><i class="fas fa-users"></i> Quienes trabajan con INCRIFE</h3>
+        <div class="team-list">
+          <div class="team-member">
+            <div class="member-icon"><i class="fas fa-guitar"></i></div>
+            <div class="member-info"><strong>Productor musical</strong><span>Carlos Mora · beats y producción 2025/2026</span></div>
+          </div>
+          <div class="team-member">
+            <div class="member-icon"><i class="fas fa-camera"></i></div>
+            <div class="member-info"><strong>Dirección visual</strong><span>Lucía Fuentes · videoclips y arte</span></div>
+          </div>
+          <div class="team-member">
+            <div class="member-icon"><i class="fas fa-headphones"></i></div>
+            <div class="member-info"><strong>Ingeniero de mezcla</strong><span>Javier Ríos · estudio M.O.</span></div>
+          </div>
+          <div class="team-member">
+            <div class="member-icon"><i class="fas fa-pen-fancy"></i></div>
+            <div class="member-info"><strong>Composición lírica</strong><span>INCRIFE + equipo creativo</span></div>
+          </div>
         </div>
+        <p style="font-size: 0.7rem; margin-top: 12px; color:#a38c6e;"><i class="fas fa-info-circle"></i> Datos recopilados por la comunidad de seguidores.</p>
       </div>
-      <div id="postsFeedNew">
-        <div style="text-align: center; padding: 1.5rem;"><i class="fas fa-heart" style="font-size: 2rem; color:#aa5577;"></i><p>Únete y descubre el muro lleno de pasión</p><button class="btn-crew" id="joinFeedAction">Conectarme ahora</button></div>
+      
+      <!-- Spotify EMBED oficial de INCRIFE -->
+      <div class="spotify-widget">
+        <h4><i class="fab fa-spotify"></i> Escucha a INCRIFE en Spotify</h4>
+        <iframe style="border-radius:16px" src="https://open.spotify.com/embed/artist/42euHjlNEF6gE3zuWrAJBi?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <p style="color:#b8b8b8; font-size:0.65rem; margin-top: 8px;">Artista: INCRIFE · Los temas más recientes se actualizan automáticamente</p>
+      </div>
+      
+      <div class="team-section" style="margin-top: 1.5rem;">
+        <h3><i class="fas fa-microphone-alt"></i> Nuevos temas en camino</h3>
+        <ul style="list-style: none; padding-left: 0;">
+          <li style="padding: 8px 0; border-bottom: 1px solid #ede3d4;"><i class="fas fa-waveform"></i> "Código Visual" (adelanto)</li>
+          <li style="padding: 8px 0; border-bottom: 1px solid #ede3d4;"><i class="fas fa-waveform"></i> "Luces de neón" (demo filtrado)</li>
+          <li style="padding: 8px 0;"><i class="fas fa-waveform"></i> "Verano infinito" (fecha por confirmar)</li>
+        </ul>
       </div>
     </div>
-
-    <!-- Miembros destacados y comunidad -->
-    <aside class="glass-card">
-      <h3 style="color:#ff8888;"><i class="fas fa-user-astronaut"></i> Miembros élite</h3>
-      <div class="members-glow" id="membersGlowContainer">
-        <img class="member-glow" src="https://ui-avatars.com/api/?background=aa2222&color=fff&name=M1">
-        <img class="member-glow" src="https://ui-avatars.com/api/?background=aa2222&color=fff&name=M2">
-        <img class="member-glow" src="https://ui-avatars.com/api/?background=aa2222&color=fff&name=M3">
-        <img class="member-glow" src="https://ui-avatars.com/api/?background=aa2222&color=fff&name=M4">
-        <img class="member-glow" src="https://ui-avatars.com/api/?background=aa2222&color=fff&name=M5">
+  </div>
+  
+  <!-- Galería con imágenes de INCRIFE (novedades visuales) -->
+  <div class="gallery-moments">
+    <h2 class="section-title"><i class="fas fa-images"></i> Avances visuales y sesiones</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://raw.githubusercontent.com/incrife/incrife/main/P1013921.jpg" alt="Fotografía sesión">
+        <p>📸 Grabación de contenido</p>
       </div>
-      <button class="join-community-btn" id="sidebarJoinBtn"><i class="fas fa-plus-circle"></i> Unirme a la resistencia</button>
-      <p style="font-size:0.65rem; margin-top: 12px; text-align:center;"><i class="fas fa-star-of-life"></i> Insignias para los más activos</p>
-    </aside>
-  </div>
-
-  <!-- Galería visual renovada -->
-  <div style="max-width: 1300px; margin: 2rem auto; padding: 0 1.5rem;">
-    <h2 style="color:#ffaaaa; margin-bottom: 1rem;"><i class="fas fa-th-large"></i> Galería INCRIFE</h2>
-    <div class="gallery-grid-new">
-      <div class="gallery-item" onclick="window.open('https://www.instagram.com/incrife/', '_blank')"><img src="https://raw.githubusercontent.com/incrife/incrife/main/P1013921.jpg" alt="incrife"><p>📸 Estilo urbano</p></div>
-      <div class="gallery-item" onclick="window.open('https://www.instagram.com/incrife/', '_blank')"><img src="https://raw.githubusercontent.com/incrife/incrife/main/P1014619_2.jpg" alt="incrife"><p>🎬 Backstage</p></div>
-      <div class="gallery-item" onclick="window.open('https://www.instagram.com/incrife/', '_blank')"><img src="https://raw.githubusercontent.com/incrife/incrife/main/IMG_5076%20(1).jpeg" alt="incrife"><p>✨ Esencia visual</p></div>
-      <div class="gallery-item" onclick="window.open('https://www.instagram.com/incrife/', '_blank')"><img src="https://raw.githubusercontent.com/incrife/incrife/main/SaveClip.App_622160511_18082149995235869_8106190216276920798_n%20(1).jpg" alt="incrife"><p>🎥 Videoclip</p></div>
+      <div class="gallery-item">
+        <img src="https://raw.githubusercontent.com/incrife/incrife/main/P1014619_2.jpg" alt="Detrás de escena">
+        <p>🎬 Detrás del nuevo video</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://raw.githubusercontent.com/incrife/incrife/main/IMG_5076%20(1).jpeg" alt="Estudio creativo">
+        <p>✨ Mood visual 2026</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://raw.githubusercontent.com/incrife/incrife/main/SaveClip.App_622160511_18082149995235869_8106190216276920798_n%20(1).jpg" alt="Videoclip">
+        <p>🎥 Escena del nuevo clip</p>
+      </div>
     </div>
   </div>
-
-  <!-- Social media con nuevo look -->
-  <div class="social-links-new">
-    <h3 style="margin-bottom: 1rem;">Sigue la corriente INCRIFE</h3>
-    <div class="social-icons-row">
-      <a href="https://www.instagram.com/incrife/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.youtube.com/@incrife" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.tiktok.com/@incrife" target="_blank"><i class="fab fa-tiktok"></i></a>
-      <a href="https://open.spotify.com/artist/42euHjlNEF6gE3zuWrAJBi" target="_blank"><i class="fab fa-spotify"></i></a>
-      <a href="https://x.com/Incrife" target="_blank"><i class="fab fa-x-twitter"></i></a>
+  
+  <!-- Sección extra: redes y cita fan -->
+  <div style="max-width: 1280px; margin: 1rem auto 2rem; padding: 0 2rem;">
+    <div style="background: #ece5db; border-radius: 28px; padding: 1rem 2rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+      <div><i class="fab fa-instagram fa-2x" style="color:#5b3e2a;"></i> <strong style="margin-left: 8px;">@incrife_fanclub</strong> <span style="font-size:0.8rem;">· comunidad no oficial</span></div>
+      <div style="display: flex; gap: 16px;">
+        <a href="https://www.instagram.com/incrife/" target="_blank" style="color: #28221a;"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="https://www.youtube.com/@incrife" target="_blank" style="color: #28221a;"><i class="fab fa-youtube fa-lg"></i></a>
+        <a href="https://x.com/Incrife" target="_blank" style="color: #28221a;"><i class="fab fa-twitter fa-lg"></i></a>
+      </div>
     </div>
   </div>
-  <footer>
-    <p>© INCRIFE Fan Army — Comunidad de lealtad y arte. #SomosFamilia</p>
-  </footer>
 </main>
 
+<footer>
+  <p>INCRIFE · Fansite independiente — Toda la información es recopilada por seguidores con fines de difusión cultural y admiración al artista.</p>
+  <p style="margin-top: 8px;">📧 contacto (fan page) · No oficial · inspirado por la música de INCRIFE</p>
+  <p style="margin-top: 6px;"><i class="fab fa-spotify"></i> <a href="https://open.spotify.com/intl-es/artist/42euHjlNEF6gE3zuWrAJBi" target="_blank" style="color:#d1c3b0;">Escucha toda la discografía en Spotify</a></p>
+</footer>
+
+<!-- Script simple para actualización de fecha dinámica (opcional) -->
 <script>
-  // ========== NUEVO DISEÑO CON MISMA LÓGICA DE COMUNIDAD ==========
-  let currentMember = null;
-  let postsArray = [];
-
-  function savePosts() { localStorage.setItem('incrifeNewPosts', JSON.stringify(postsArray)); }
-  function loadPostsStorage() {
-    const stored = localStorage.getItem('incrifeNewPosts');
-    if(stored) postsArray = JSON.parse(stored);
-    else {
-      postsArray = [
-        { id: 101, author: "FanAdepto", authorAvatar: "https://ui-avatars.com/api/?background=cc0000&color=fff&name=FA", content: "El nuevo adelanto suena brutal, necesito la fecha 🔥", date: new Date(Date.now() - 7200000).toISOString(), likes: 24, likedBy: [] },
-        { id: 102, author: "CreadorVisual", authorAvatar: "https://ui-avatars.com/api/?background=cc0000&color=fff&name=CV", content: "Acabo de terminar un fanart inspirado en la última sesión de fotos 🎨", date: new Date(Date.now() - 3600000).toISOString(), likes: 15, likedBy: [] }
-      ];
-      savePosts();
-    }
-    renderFeedPosts();
-  }
-
-  function renderFeedPosts() {
-    const container = document.getElementById('postsFeedNew');
-    if(!container) return;
-    if(!currentMember) {
-      container.innerHTML = `<div style="text-align:center;padding:2rem;"><i class="fas fa-lock" style="font-size:2rem;"></i><p>Accede a la comunidad para ver el muro 🔥</p><button class="btn-crew" id="joinFeedAction2">Unirme ahora</button></div>`;
-      const btn = document.getElementById('joinFeedAction2');
-      if(btn) btn.onclick = () => simulateLoginNew();
-      return;
-    }
-    if(postsArray.length === 0) { container.innerHTML = '<p style="text-align:center;">Sé el primero en publicar ✨</p>'; return; }
-    container.innerHTML = postsArray.map(post => `
-      <div class="post-card-new">
-        <div class="post-header">
-          <img class="avatar-post" src="${post.authorAvatar}" alt="avatar">
-          <div><strong>${escapeHtmlNew(post.author)}</strong><div class="post-meta">${timeAgoNew(post.date)}</div></div>
-        </div>
-        <div class="post-content-text">${escapeHtmlNew(post.content)}</div>
-        <div class="post-engagement">
-          <button class="likeBtnNew" data-id="${post.id}"><i class="fas fa-heart"></i> ${post.likes}</button>
-          <button><i class="fas fa-comment"></i> Responder</button>
-        </div>
-      </div>
-    `).join('');
-    document.querySelectorAll('.likeBtnNew').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        if(!currentMember) { alert("Únete para interactuar"); return; }
-        const id = parseInt(btn.dataset.id);
-        const post = postsArray.find(p => p.id === id);
-        if(post) {
-          if(post.likedBy && post.likedBy.includes(currentMember.email)) {
-            post.likes--;
-            post.likedBy = post.likedBy.filter(e => e !== currentMember.email);
-          } else {
-            post.likes++;
-            if(!post.likedBy) post.likedBy = [];
-            post.likedBy.push(currentMember.email);
-          }
-          savePosts();
-          renderFeedPosts();
-        }
-      });
-    });
-  }
-
-  function escapeHtmlNew(str) { const d = document.createElement('div'); d.textContent = str; return d.innerHTML; }
-  function timeAgoNew(dateStr) {
-    const diff = Date.now() - new Date(dateStr).getTime();
-    const mins = Math.floor(diff/60000);
-    if(mins<60) return `hace ${mins} min`;
-    const hours = Math.floor(mins/60);
-    if(hours<24) return `hace ${hours} h`;
-    return `hace ${Math.floor(hours/24)} d`;
-  }
-
-  function simulateLoginNew() {
-    const randomName = "Fan_" + Math.floor(Math.random() * 900);
-    currentMember = { name: randomName, email: `fan${Date.now()}@incrife.com`, avatar: `https://ui-avatars.com/api/?background=bb2222&color=fff&name=${randomName.charAt(0)}` };
-    localStorage.setItem('incrifeMember', JSON.stringify(currentMember));
-    const createDiv = document.getElementById('createPostContainerNew');
-    if(createDiv) createDiv.style.display = 'block';
-    renderFeedPosts();
-    alert(`✨ ¡Bienvenido a la FAN ARMY, ${randomName}! Ahora eres parte de la comunidad.`);
-  }
-
-  function checkLoggedUser() {
-    const savedMember = localStorage.getItem('incrifeMember');
-    if(savedMember) {
-      currentMember = JSON.parse(savedMember);
-      const createDiv = document.getElementById('createPostContainerNew');
-      if(createDiv) createDiv.style.display = 'block';
-      renderFeedPosts();
-    }
-  }
-
-  document.getElementById('heroJoinBtn')?.addEventListener('click', (e) => { e.preventDefault(); simulateLoginNew(); });
-  document.getElementById('signupBtnNew')?.addEventListener('click', (e) => { e.preventDefault(); simulateLoginNew(); });
-  document.getElementById('sidebarJoinBtn')?.addEventListener('click', () => simulateLoginNew());
-  document.getElementById('joinFeedAction')?.addEventListener('click', () => simulateLoginNew());
-  if(document.getElementById('joinFeedAction')) document.getElementById('joinFeedAction')?.addEventListener('click', () => simulateLoginNew());
-
-  document.getElementById('publishPostNew')?.addEventListener('click', () => {
-    if(!currentMember) { alert("Debes unirte a la comunidad primero"); return; }
-    const content = document.getElementById('newPostText')?.value.trim();
-    if(!content) return alert("Escribe algo cool!");
-    const newPostItem = {
-      id: Date.now(),
-      author: currentMember.name,
-      authorAvatar: currentMember.avatar,
-      content: content,
-      date: new Date().toISOString(),
-      likes: 0,
-      likedBy: []
-    };
-    postsArray.unshift(newPostItem);
-    savePosts();
-    renderFeedPosts();
-    document.getElementById('newPostText').value = '';
-  });
-
-  // Mobile toggle nuevo
-  const mobileBtn = document.getElementById('mobileBtnCrew');
-  const navMenu = document.getElementById('navMenuCrew');
-  if(mobileBtn && navMenu) {
-    mobileBtn.onclick = () => {
-      if(navMenu.style.display === 'flex') navMenu.style.display = 'none';
-      else navMenu.style.display = 'flex';
-    };
-    window.addEventListener('resize', () => { if(window.innerWidth > 760) navMenu.style.display = 'flex'; else if(navMenu.style.display !== 'none') navMenu.style.display = 'none'; });
-  }
-
-  loadPostsStorage();
-  checkLoggedUser();
+  // solo fines visuales: actualizar etiquetas si se quiere mantener fresh, pero no necesario
+  console.log("Fansite no oficial de INCRIFE - solo noticias y novedades");
 </script>
 </body>
 </html>
